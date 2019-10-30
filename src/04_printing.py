@@ -8,10 +8,17 @@ x = 10
 y = 2.24552
 z = "I like turtles!"
 
-# Using the printf operator (%), print the following feeding in the values of x,
-# y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
 
-# Use the 'format' string method to print the same thing
+# the printf operator (%)
+print("x is %d, y is %.2f, z is '%s'" % (x, y, z)) 
+    # %[flags][width][.precision]type
+    # why don't I need to specify the [flags] or [width]?
+    # (https://www.geeksforgeeks.org/python-output-formatting/#targetText=In%20Python%2C%20there%20is%20no,sometimes%20even%20called%20modulus)%20operator.)
 
-# Finally, print the same thing using an f-string
+# the 'format' string method
+print("x is {}, y is {:.2f}, z is '{}'".format(x, y, z))
+
+# using an f-string
+print(f'x is {x}, y is {y:.2f}, z is "{z}"') # also works
+print(f'x is {x}, y is {round(y, 2)}, z is "{z}"')
